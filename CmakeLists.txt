@@ -67,97 +67,97 @@ target_link_libraries(
   )
 
 add_executable(
-  test
+  yojimbo_test
   yojimbo
   tests/test.cpp
   )
 
 target_link_libraries(
-  test
+  yojimbo_test
   yojimbo
   ${YOJIMBO_STATIC}
   )
 
 add_executable(
-  info
+  yojimbo_info
   yojimbo
   tests/info.cpp
   )
 
 target_link_libraries(
-  info
+  yojimbo_info
   yojimbo
   ${YOJIMBO_STATIC}
   )
 
 add_executable(
-  client
+  yojimbo_client
   yojimbo
   tests/client.cpp
   )
 
 target_link_libraries(
-  client
+  yojimbo_client
   yojimbo
   ${YOJIMBO_STATIC}
   )
 
 add_executable(
-  server
+  yojimbo_server
   yojimbo
   tests/server.cpp
   )
 
 target_link_libraries(
-  server
+  yojimbo_server
   yojimbo
   ${YOJIMBO_STATIC}
   )
 
 add_executable(
-  secure_server
+  yojimbo_secure_server
   yojimbo
   tests/server.cpp
   )
 
-target_compile_definitions(secure_server PRIVATE SECURE_SERVER=1)
+target_compile_definitions( yojimbo_secure_server PRIVATE SECURE_SERVER=1)
 
 target_link_libraries(
-  secure_server
+  yojimbo_secure_server
   yojimbo
   ${YOJIMBO_STATIC}
   )
 
 add_executable(
-  client_server
+  yojimbo_client_server
   yojimbo
   tests/client_server.cpp
   )
 
 target_link_libraries(
-  client_server
+  yojimbo_client_server
   yojimbo
   ${YOJIMBO_STATIC}
   )
 
 add_executable(
-  soak
+  yojimbo_soak
   tests/soak.cpp
   )
 
 target_link_libraries(
-  soak
+  yojimbo_soak
   yojimbo
   ${YOJIMBO_STATIC}
   )
 
 add_executable(
-  profile
+  yojimbo_profile
   tests/profile.cpp
   )
 
 target_link_libraries(
-  profile
+  yojimbo_profile
   yojimbo
   ${YOJIMBO_STATIC}
   )
