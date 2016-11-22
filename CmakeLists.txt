@@ -75,7 +75,6 @@ add_executable(
 target_link_libraries(
   yojimbo_test
   yojimbo
-  ${YOJIMBO_STATIC}
   )
 
 add_executable(
@@ -87,7 +86,6 @@ add_executable(
 target_link_libraries(
   yojimbo_info
   yojimbo
-  ${YOJIMBO_STATIC}
   )
 
 add_executable(
@@ -99,7 +97,6 @@ add_executable(
 target_link_libraries(
   yojimbo_client
   yojimbo
-  ${YOJIMBO_STATIC}
   )
 
 add_executable(
@@ -111,7 +108,6 @@ add_executable(
 target_link_libraries(
   yojimbo_server
   yojimbo
-  ${YOJIMBO_STATIC}
   )
 
 add_executable(
@@ -125,7 +121,6 @@ target_compile_definitions( yojimbo_secure_server PRIVATE SECURE_SERVER=1)
 target_link_libraries(
   yojimbo_secure_server
   yojimbo
-  ${YOJIMBO_STATIC}
   )
 
 add_executable(
@@ -137,7 +132,6 @@ add_executable(
 target_link_libraries(
   yojimbo_client_server
   yojimbo
-  ${YOJIMBO_STATIC}
   )
 
 add_executable(
@@ -148,7 +142,6 @@ add_executable(
 target_link_libraries(
   yojimbo_soak
   yojimbo
-  ${YOJIMBO_STATIC}
   )
 
 add_executable(
@@ -159,5 +152,4 @@ add_executable(
 target_link_libraries(
   yojimbo_profile
   yojimbo
-  ${YOJIMBO_STATIC}
   )
