@@ -100,6 +100,19 @@ target_link_libraries(
   )
 
 add_executable(
+  yojimbo_secure_client
+  yojimbo
+  tests/client.cpp
+  )
+  
+target_compile_definitions( yojimbo_secure_client PRIVATE YOJIMBO_SECURE_MODE=1)
+
+target_link_libraries(
+  yojimbo_secure_client
+  yojimbo
+  )
+
+ add_executable(
   yojimbo_server
   yojimbo
   tests/server.cpp
