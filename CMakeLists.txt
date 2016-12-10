@@ -1,6 +1,16 @@
+cmake_minimum_required(VERSION 3.2)
+
+include("cmake/HunterGate.cmake")
+
+HunterGate(
+    URL "https://github.com/ruslo/hunter/archive/v0.17.3.tar.gz"
+    SHA1 "2a2f193860e2cb3b884bce74d85c3f30b1092274"
+)
+
 project (yojimbo)
 
-cmake_minimum_required(VERSION 3.2)
+hunter_add_package(libsodium)
+find_package(libsodium CONFIG REQUIRED)
 
 add_library(
   yojimbo
@@ -62,7 +72,7 @@ link_directories(
 
 target_link_libraries(
   yojimbo
-  sodium-release
+  libsodium::libsodium
   mbedtls-release
   mbedcrypto-release
   mbedx509-release
