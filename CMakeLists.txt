@@ -102,7 +102,7 @@ target_link_libraries(
 add_executable(
   yojimbo_secure_client
   yojimbo
-  tests/client.cpp
+  tests/secure_client.cpp
   )
   
 target_compile_definitions( yojimbo_secure_client PRIVATE YOJIMBO_SECURE_MODE=1)
@@ -126,7 +126,7 @@ target_link_libraries(
 add_executable(
   yojimbo_secure_server
   yojimbo
-  tests/server.cpp
+  tests/secure_server.cpp
   )
 
 target_compile_definitions( yojimbo_secure_server PRIVATE SECURE_SERVER=1)
