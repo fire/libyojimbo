@@ -166,3 +166,11 @@ target_link_libraries(
   yojimbo_profile
   yojimbo
   )
+
+ADD_CUSTOM_COMMAND(
+  OUTPUT    ${CMAKE_BINARY_DIR}/build_matcher.exec
+  WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/docker/matcher
+  COMMAND   "${CMAKE_SOURCE_DIR}/docker/buildServer.bat"
+  )
+
+add_custom_target(matcher DEPENDS build_matcher.exec)
